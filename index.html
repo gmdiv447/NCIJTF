@@ -293,7 +293,7 @@ function startScan() {
 
   let i = 0;
   const scan = setInterval(() => {
-    terminal.textContent += "[SCAN] " + lines[i % lines.length] + "\n";
+    terminal.innerHTML += "[SCAN] " + lines[i % lines.length] + "<br>";
     terminal.scrollTop = terminal.scrollHeight;
     i++;
   }, 1000);
