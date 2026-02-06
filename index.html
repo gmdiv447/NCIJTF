@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NATIONAL CYBER INVESTIGATION JOINT TASK FORCE</title>
+<link rel="icon" type="image/png" href="logo.png">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #ffffff;
+  color: #000;
+}
+
+/* HEADER */
+header {
+  background: #0b2a4a;
+  color: #fff;
+  padding: 20px 40px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.logo img {
+  height: 80px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.brand {
+  text-align: center;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.brand p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* MAIN */
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #333;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px 24px;
+  font-size: 16px;
+  background: #0b2a4a;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #08305c;
+}
+
+#terminal {
+  display: none;
+  margin-top: 20px;
+  background: #000;
+  color: #ff2a2a;
+  font-family: monospace;
+  padding: 12px;
+  height: 440px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+/* IMAGES */
+.images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.images img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 60px;
+  background: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+/* PRANK FOOTER */
+.prank-footer {
+  background: linear-gradient(to bottom, #1a1a1a, #000);
+  color: #cfcfcf;
+  font-size: 14px;
+  margin-top: 80px;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 40px;
+  padding: 40px 60px;
+}
+
+.footer-logo {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-sub {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-center {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.footer-col span {
+  display: block;
+  margin-bottom: 8px;
+  color: #bdbdbd;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.socials span {
+  display: inline-block;
+  margin-left: 12px;
+  font-weight: bold;
+}
+
+.subscribe {
+  margin-top: 14px;
+  display: inline-block;
+  background: #2b5ea8;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 14px;
+  font-size: 13px;
+  color: #9a9a9a;
+  border-top: 1px solid #222;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">
+    <img src="logo.png" alt="RRR Logo">
+  </div>
+
+  <div class="brand">
+    <h1>NATIONAL CYBER INVESTIGATION JOINT TASK FORCE</h1>
+    <p>UNITED STATES OF AMERICA</p>
+  </div>
+
+  <!-- empty column keeps center perfect -->
+  <div></div>
+</header>
+
+<main>
+  <label for="email">Enter email address</label>
+  <input type="email" id="email" placeholder="example@email.com">
+  <button onclick="startScan()">Check</button>
+
+  <div id="terminal"></div>
+
+  <div class="images">
+  <img src="image1.jpg" alt="Image 1">
+  <img src="image2.jpg" alt="Image 2">
+  <img src="image3.jpg" alt="Image 3">
+</div>
+</main>
+
+<footer class="prank-footer">
+  <div class="footer-top">
+
+    <div class="footer-left">
+      <div class="footer-logo">★ Veterans Crisis Line</div>
+      <div class="footer-sub">
+        <br>
+        Dial 988 then PRESS ❶
+      </div>
+    </div>
+
+    <div class="footer-center">
+      <div class="footer-col">
+        <span>Privacy & Security</span>
+        <span>Plain Writing Act</span>
+        <span>Imagery Use</span>
+        <span>Small Business Act</span>
+        <span>Open GOV</span>
+      </div>
+
+      <div class="footer-col">
+        <span>Links Disclaimer</span>
+        <span>DOW IG</span>
+        <span>FOIA</span>
+        <span>Section 508</span>
+        <span>Reporting Civillian Casualties</span>
+      </div>
+
+      <div class="footer-col">
+        <span>Strategic Management Plan</span>
+        <span>USA.gov</span>
+        <span>Web Policy</span>
+        <span>Social Media Policy</span>
+        <span>No FEAR act</span>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <div class="socials">
+        <span>X</span>
+        <span>f</span>
+        <span>◎</span>
+        <span>in</span>
+        <span>▶</span>
+      </div>
+
+      <div class="subscribe">Subscribe</div>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    Hosted by Defense Media Activity - WEB.mil
+  </div>
+</footer>
+
+
+<script>
+const terminal = document.getElementById("terminal");
+
+const lines = [
+  "Initializing usage scan...",
+  "Tracking criminal's activities...",
+  "Monitoring suspicious activites...",
+  "Scanning crime databases...",
+  "Compiling usage report..."
+];
+
+function startScan() {
+  const email = document.getElementById("email").value.trim();
+  if (!email) {
+    alert("Please enter an email address");
+    return;
+  }
+
+  terminal.style.display = "block";
+  terminal.textContent = "";
+
+  let i = 0;
+  const scan = setInterval(() => {
+    terminal.textContent += "[SCAN] " + lines[i % lines.length] + "\n";
+    terminal.scrollTop = terminal.scrollHeight;
+    i++;
+  }, 1000);
+
+  setTimeout(() => {
+    clearInterval(scan);
+    showPrankResults(email);
+  }, 6000);
+}
+
+function showPrankResults(email) {
+  terminal.textContent =
+`Email usage Tracking for ${email}
+
+1. Warning: Content-Security-Policy; Bad content security policy. Drug act TheControlled Substances Act (CSA) of 1970 email has been used 
+on 12.01.2026 www.cocawhite.com
+Source: https://www.torproject.org/
+ip address 123.456.786.90
+Drug act TheControlled Substances Act (CSA) of 1970.
+
+2. Warning: Content-Security-Policy; Bad content security policy. Drug act TheControlled Substances Act (CSA) of 1970 email has been used 
+on 12.01.2026 www.cocawhite.com
+Source: https://www.torproject.org/
+ip address 123.456.786.90
+Drug act TheControlled Substances Act (CSA) of 1970.
+
+3. Warning: Content-Security-Policy; Bad content security policy. Drug act TheControlled Substances Act (CSA) of 1970 email has been used 
+on 12.01.2026 www.cocawhite.com
+Source: https://www.torproject.org/
+ip address 123.456.786.90
+Drug act TheControlled Substances Act (CSA) of 1970.
+
+4. Warning: Content-Security-Policy; Bad content security policy. Drug act TheControlled Substances Act (CSA) of 1970 email has been used 
+on 12.01.2026 www.cocawhite.com
+Source: https://www.torproject.org/
+ip address 123.456.786.90
+Drug act TheControlled Substances Act (CSA) of 1970.
+
+
+Error: CSS: padding-inline-end: var(--PgAWLe, unset) is not a padding-inline-end value.
+At line 7, column 66053 mail is been used on 12.01.2026 www.buymygun.com
+Source  https://www.torproject.org/
+ip address 123.456.786.90
+
+Drug act TheControlled Substances Act (CSA) of 1970
+
+Gun act National Firearms Act (NFA) (1934)
+
+Child pornography Protection of Children Against Sexual Exploitation Act of 1978
+
+Money laundering Anti-Money Laundering Act of 2020 (AMLA)
+
+Email has been used on 12.01.2026 www.buymygun.com source https://www.torproject.org/ 123.456.786.90
+
+
+
+Usage attepts
+
+www.seedweed.com
+www.14+girls.com
+www.babygirl.com
+www.cocawhite.com
+www.senditanywere.com
+www.saitanparts.coe
+www.freshivorycolombia.ceo
+www.pakarms.co/
+https://zzztube.com/tube/russian
+www.getmorphine.com
+
+production usage tracking for email completed.
+`;
+
+  terminal.scrollTop = terminal.scrollHeight;
+}
+
+</script>
+</body>
+</html>
