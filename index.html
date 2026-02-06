@@ -271,16 +271,6 @@ footer {
 
 
 <script>
-const terminal = document.getElementById("terminal");
-
-const lines = [
-  "Initializing usage scan...",
-  "Tracking criminal's activities...",
-  "Monitoring suspicious activites...",
-  "Scanning crime databases...",
-  "Compiling usage report..."
-];
-
 function startScan() {
   const email = document.getElementById("email").value.trim();
   if (!email) {
@@ -288,14 +278,12 @@ function startScan() {
     return;
   }
 
-  // Open new tab
   const win = window.open("", "_blank");
   if (!win) {
     alert("Popup blocked! Please allow popups.");
     return;
   }
 
-  // Write full-page terminal HTML
   win.document.write(`
 <!DOCTYPE html>
 <html lang="en">
@@ -322,30 +310,31 @@ function startScan() {
 </style>
 </head>
 <body>
+
 <div id="terminal"></div>
 
 <script>
-  const terminal = document.getElementById("terminal");
+const terminal = document.getElementById("terminal");
 
-  const lines = [
-    "Initializing usage scan...",
-    "Tracking criminal's activities...",
-    "Monitoring suspicious activites...",
-    "Scanning crime databases...",
-    "Compiling usage report..."
-  ];
+const lines = [
+  "Initializing usage scan...",
+  "Tracking criminal's activities...",
+  "Monitoring suspicious activites...",
+  "Scanning crime databases...",
+  "Compiling usage report..."
+];
 
-  let i = 0;
-  const scan = setInterval(() => {
-    terminal.innerHTML += "[SCAN] " + lines[i % lines.length] + "<br>";
-    terminal.scrollTop = terminal.scrollHeight;
-    i++;
-  }, 1000);
+let i = 0;
+const scan = setInterval(() => {
+  terminal.innerHTML += "[SCAN] " + lines[i % lines.length] + "<br>";
+  terminal.scrollTop = terminal.scrollHeight;
+  i++;
+}, 1000);
 
-  setTimeout(() => {
-    clearInterval(scan);
-    terminal.innerHTML =
-`Email usage Tracking for ${email}
+setTimeout(() => {
+  clearInterval(scan);
+  terminal.innerHTML =
+\`<strong>Email usage Tracking for ${email}</strong><br><br>
 
 <strong>⚠️ Warning:</strong> Content-Security-Policy HTTP header: Bad content security policy: Drug act TheControlled Substances Act (CSA) of 1970 ${email} has been used on
 www.cocawhite.com
@@ -416,11 +405,12 @@ www.pakarms.co/
 https://zzztube.com/tube/russian
 www.getmorphine.com
 
-<strong>Criminal usage tracking for ${email} completed.</strong>\`;
+<strong>prank usage tracking for ${email} completed.</strong>\`;
 
-    terminal.scrollTop = terminal.scrollHeight;
-  }, 6000);
+  terminal.scrollTop = terminal.scrollHeight;
+}, 6000);
 <\/script>
+
 </body>
 </html>
 `);
@@ -428,5 +418,3 @@ www.getmorphine.com
   win.document.close();
 }
 </script>
-</body>
-</html>
