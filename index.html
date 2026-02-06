@@ -288,8 +288,52 @@ function startScan() {
     return;
   }
 
-  terminal.style.display = "block";
-  terminal.innerHTML = "";
+  // Open new tab
+  const win = window.open("", "_blank");
+  if (!win) {
+    alert("Popup blocked! Please allow popups.");
+    return;
+  }
+
+  // Write full-page terminal HTML
+  win.document.write(`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Scanning ${email}</title>
+<style>
+  body {
+    margin: 0;
+    background: #000;
+    color: #ff2a2a;
+    font-family: monospace;
+  }
+  #terminal {
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    box-sizing: border-box;
+  }
+  strong {
+    color: #ff5a5a;
+  }
+</style>
+</head>
+<body>
+<div id="terminal"></div>
+
+<script>
+  const terminal = document.getElementById("terminal");
+
+  const lines = [
+    "Initializing usage scan...",
+    "Tracking criminal's activities...",
+    "Monitoring suspicious activites...",
+    "Scanning crime databases...",
+    "Compiling usage report..."
+  ];
 
   let i = 0;
   const scan = setInterval(() => {
@@ -300,12 +344,7 @@ function startScan() {
 
   setTimeout(() => {
     clearInterval(scan);
-    showPrankResults(email);
-  }, 6000);
-}
-
-function showPrankResults(email) {
-  terminal.innerHTML =
+    terminal.innerHTML =
 `Email usage Tracking for ${email}
 
 <strong>⚠️ Warning:</strong> Content-Security-Policy HTTP header: Bad content security policy: Drug act TheControlled Substances Act (CSA) of 1970 ${email} has been used on
@@ -377,12 +416,17 @@ www.pakarms.co/
 https://zzztube.com/tube/russian
 www.getmorphine.com
 
-Offencive usage tracking for ${email} completed.
-`;
+<strong>Criminal usage tracking for ${email} completed.</strong>\`;
 
-  terminal.scrollTop = terminal.scrollHeight;
+    terminal.scrollTop = terminal.scrollHeight;
+  }, 6000);
+<\/script>
+</body>
+</html>
+`);
+
+  win.document.close();
 }
-
 </script>
 </body>
 </html>
